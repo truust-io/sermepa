@@ -22,6 +22,5 @@
       "Sermepa\\Tpv\\": "src/Sermepa/Tpv/",
       "Redsys\\": "src/Redsys/"
     }
-  },
-  "minimum-stability": "dev"
+  }
 }
