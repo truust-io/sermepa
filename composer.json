@@ -23,5 +23,5 @@
       "Redsys\\": "src/Redsys/"
     }
   },
-  "minimum-stability": "stable"
+  "minimum-stability": "dev"
 }
