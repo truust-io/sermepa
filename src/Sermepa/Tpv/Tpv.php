@@ -437,18 +437,27 @@ class Tpv
         } elseif ($environment === 'test') {
             //Test
             $this->_setEnvironment = 'https://sis-t.redsys.es:25443/sis/realizarPago';
+        } elseif ($environment === 'integration') {
+            //Integration
+            $this->_setEnvironment = 'https://sis-i.redsys.es:25443/sis/realizarPago';
         } elseif ($environment === 'restLive' || $environment === 'manageRequestRestLive') {
             //Rest Live
             $this->_setEnvironment = 'https://sis.redsys.es/sis/rest/trataPeticionREST';
         } elseif ($environment === 'restTest' || $environment === 'manageRequestRestTest' ) {
             //Rest Test
             $this->_setEnvironment = 'https://sis-t.redsys.es:25443/sis/rest/trataPeticionREST';
+        } elseif ($environment === 'restIntegration' || $environment === 'manageRequestRestIntegration' ) {
+            //Rest Integration
+            $this->_setEnvironment = 'https://sis-i.redsys.es:25443/sis/rest/trataPeticionREST';
         } elseif ($environment === 'startRequestRestLive') {
             //Start request
             $this->_setEnvironment = 'https://sis.redsys.es/sis/rest/iniciaPeticionREST';
         } elseif ($environment === 'startRequestRestTest') {
             //Start request test
             $this->_setEnvironment = 'https://sis-t.redsys.es:25443/sis/rest/iniciaPeticionREST';
+        } elseif ($environment === 'startRequestRestIntegration') {
+            //Start request integration
+            $this->_setEnvironment = 'https://sis-i.redsys.es:25443/sis/rest/iniciaPeticionREST';
         } else {
             throw new TpvException('Add test or live');
         }
@@ -521,6 +530,10 @@ class Tpv
 
         // Stores the array of JavaScript file paths.
         static $jsPaths = [
+            'integration' => [
+                '2' => 'https://sis-i.redsys.es:25443/sis/NC/sandbox/redsysV2.js',
+                '3' => 'https://sis-i.redsys.es:25443/sis/NC/sandbox/redsysV3.js',
+            ],
             'test' => [
                 '2' => 'https://sis-t.redsys.es:25443/sis/NC/sandbox/redsysV2.js',
                 '3' => 'https://sis-t.redsys.es:25443/sis/NC/sandbox/redsysV3.js',
